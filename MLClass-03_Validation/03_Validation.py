@@ -118,24 +118,24 @@ print(accuracy_svm)
 
 # -----------------------
 # realizando previsões com o arquivo de
-print(' - Aplicando modelo e enviando para o servidor')
+# print(' - Aplicando modelo e enviando para o servidor')
 
-data_app = data_app[feature_cols]
+# data_app = data_app[feature_cols]
 
-y_pred = svm_model_linear.predict(data_app)
+# y_pred = svm_model_linear.predict(data_app)
 
-# Enviando previsões realizadas com o modelo para o servidor
-URL = "https://aydanomachado.com/mlclass/03_Validation.php"
+# # Enviando previsões realizadas com o modelo para o servidor
+# URL = "https://aydanomachado.com/mlclass/03_Validation.php"
 
-DEV_KEY = "AV"
+# DEV_KEY = "AV"
 
-# json para ser enviado para o servidor
-data = {'dev_key':DEV_KEY,
-         'predictions':pd.Series(y_pred).to_json(orient='values')}
+# # json para ser enviado para o servidor
+# data = {'dev_key':DEV_KEY,
+#          'predictions':pd.Series(y_pred).to_json(orient='values')}
 
-# Enviando requisição e salvando o objeto resposta
-r = requests.post(url = URL, data = data)
+# # Enviando requisição e salvando o objeto resposta
+# r = requests.post(url = URL, data = data)
 
-# Extraindo e imprimindo o texto da resposta
-pastebin_url = r.text
-print(" - Resposta do servidor:\n", r.text, "\n")
+# # Extraindo e imprimindo o texto da resposta
+# pastebin_url = r.text
+# print(" - Resposta do servidor:\n", r.text, "\n")
